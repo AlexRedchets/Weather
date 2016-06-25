@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:id="@+id/hourlyForecastFragment">
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/cloud"
+                    android:id="@+id/hourlyImage1"
+                    android:layout_below="@+id/hourlyTemp1"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hourlyTemp1"
+                    android:text="25"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:00"
+                    android:id="@+id/hourlyTime1"
+                    android:layout_below="@+id/hourlyImage1"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/cloud"
+                    android:id="@+id/hourlyImage2"
+                    android:layout_below="@+id/hourlyTemp2"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hourlyTemp2"
+                    android:text="25"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:00"
+                    android:id="@+id/hourlyTime2"
+                    android:layout_below="@+id/hourlyImage2"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/cloud"
+                    android:id="@+id/hourlyImage3"
+                    android:layout_below="@+id/hourlyTemp3"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hourlyTemp3"
+                    android:text="25"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:00"
+                    android:id="@+id/hourlyTime3"
+                    android:layout_below="@+id/hourlyImage3"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/cloud"
+                    android:id="@+id/hourlyImage4"
+                    android:layout_below="@+id/hourlyTemp4"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hourlyTemp4"
+                    android:text="25"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:00"
+                    android:id="@+id/hourlyTime4"
+                    android:layout_below="@+id/hourlyImage4"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/cloud"
+                    android:id="@+id/hourlyImage5"
+                    android:layout_below="@+id/hourlyTemp5"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hourlyTemp5"
+                    android:text="25"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:00"
+                    android:id="@+id/hourlyTime5"
+                    android:layout_below="@+id/hourlyImage5"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/cloud"
+                    android:id="@+id/hourlyImage6"
+                    android:layout_below="@+id/hourlyTemp6"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hourlyTemp6"
+                    android:text="25"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:00"
+                    android:id="@+id/hourlyTime6"
+                    android:layout_below="@+id/hourlyImage6"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/cloud"
+                    android:id="@+id/hourlyImage7"
+                    android:layout_below="@+id/hourlyTemp7"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hourlyTemp7"
+                    android:text="25"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:00"
+                    android:id="@+id/hourlyTime7"
+                    android:layout_below="@+id/hourlyImage7"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/cloud"
+                    android:id="@+id/hourlyImage8"
+                    android:layout_below="@+id/hourlyTemp8"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hourlyTemp8"
+                    android:text="25"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:00"
+                    android:id="@+id/hourlyTime8"
+                    android:layout_below="@+id/hourlyImage8"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/cloud"
+                    android:id="@+id/hourlyImage9"
+                    android:layout_below="@+id/hourlyTemp9"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hourlyTemp9"
+                    android:text="25"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:00"
+                    android:id="@+id/hourlyTime9"
+                    android:layout_below="@+id/hourlyImage9"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>
