@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        Log.i(TAG, "OnResume");
         super.onResume();
+        Log.i(TAG, "OnResume");
         runFragments();
     }
 }
