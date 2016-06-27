@@ -1,6 +1,7 @@
 package com.azvk.weather;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,20 +15,22 @@ import com.squareup.picasso.Picasso;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class ForecastAdapter extends BaseAdapter {
+class ForecastAdapter extends BaseAdapter {
 
     private java.util.List<com.azvk.weather.model_forecast.List> list;
     private Context context;
     private LayoutInflater inflater;
+    private String TAG = ForecastAdapter.class.getSimpleName();
 
-    public ForecastAdapter (Context context) {
+    ForecastAdapter(Context context) {
         this.context = context;
         inflater = LayoutInflater.from(this.context);
     }
 
-    public void updateAdapter(java.util.List<com.azvk.weather.model_forecast.List> list){
+    void updateAdapter(java.util.List<com.azvk.weather.model_forecast.List> list){
         this.list = list;
         notifyDataSetChanged();
+        Log.i(TAG, "Adapter is updated");
     }
 
     @Override
@@ -62,24 +65,30 @@ public class ForecastAdapter extends BaseAdapter {
         com.azvk.weather.model_forecast.List currentListData = getItem(position);
         String timeToShow = currentListData.getDt().toString();
         Date d = new Date(Long.parseLong(timeToShow) * 1000);
-        SimpleDateFormat sdf = new SimpleDateFormat("E");
-        Integer currentTemp = (currentListData.getTemp().getDay()).intValue();
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM, d\nE");
+        Integer currentTempDay = (currentListData.getTemp().getDay()).intValue();
+        Integer currentTempNight = (currentListData.getTemp().getNight()).intValue();
+        ChangeIcon changeIcon = new ChangeIcon(currentListData.getWeather().get(0).getIcon());
+        String image = changeIcon.getUrl();
 
 
         mViewHolder.day.setText(sdf.format(d));
-        mViewHolder.temp.setText(currentTemp.toString());
-        Picasso.with(context).load("http://openweathermap.org/img/w/" + currentListData.getWeather().get(0).getIcon() + ".png").into(mViewHolder.forecastImage);
+        mViewHolder.tempDay.setText(" " + String.valueOf(currentTempDay) + " °C");
+        mViewHolder.tempNight.setText(" " + String.valueOf(currentTempNight) + " °C");
+        Picasso.with(context).load(image).into(mViewHolder.forecastImage);
 
         return convertView;
     }
 
     private class ViewHolder{
-        TextView temp;
+        TextView tempDay;
+        TextView tempNight;
         TextView day;
         ImageView forecastImage;
 
         public ViewHolder(View view) {
-            temp = (TextView)view.findViewById(R.id.forecastTemp);
+            tempDay = (TextView)view.findViewById(R.id.forecastDayTemp);
+            tempNight = (TextView)view.findViewById(R.id.forecastNightTemp);
             day = (TextView)view.findViewById(R.id.forecastDay);
             forecastImage = (ImageView)view.findViewById(R.id.forecastImage);
         }

@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,7 +29,7 @@ import static android.content.ContentValues.TAG;
 
 public class HourlyForecastFragment extends Fragment {
 
-    private HourlyForecastAdapter adapter = new HourlyForecastAdapter(getActivity());
+    private HourlyForecastAdapter adapter;
     private List<com.azvk.weather.model_hourly.List> list;
 
     private final String KEY_RECYCLER_STATE = "recycler_state";
@@ -49,6 +50,7 @@ public class HourlyForecastFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        setupView(view);
         getHourlyValues();
     }
 
@@ -67,11 +69,6 @@ public class HourlyForecastFragment extends Fragment {
 
         //latitude = String.valueOf(52.0515);
         //longitude = String.valueOf(113.4712);
-
-        recyclerView = (RecyclerView) getActivity().findViewById(R.id.hourlyWeather);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
 
         WeatherClient client = ServiceGenerator.createService(WeatherClient.class);
 
@@ -93,6 +90,15 @@ public class HourlyForecastFragment extends Fragment {
                 Log.e(TAG, "Unable connect to OPENWEATHER.com", t);
             }
         });
+    }
+
+    private void setupView(View view) {
+        recyclerView = (RecyclerView) view.findViewById(R.id.hourlyWeather);
+        //recyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+        adapter = new HourlyForecastAdapter(getActivity()) ;
+        recyclerView.setAdapter(adapter);
     }
 
     @Override
@@ -117,6 +123,4 @@ public class HourlyForecastFragment extends Fragment {
             recyclerView.getLayoutManager().onRestoreInstanceState(listState);
         }
     }
-
-
 }

@@ -4,31 +4,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forecastDayTemp"
+        android:text="@string/instance"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forecastDayTempText"
+        android:text="@string/day"
+        android:layout_alignBaseline="@+id/forecastDayTemp"
+        android:layout_alignBottom="@+id/forecastDayTemp"
+        android:layout_toStartOf="@+id/forecastDayTemp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forecastNightTemp"
+        android:text="@string/instance"
+        android:textColor="#B6B6B6"
+        android:layout_alignBaseline="@+id/forecastNightTempText"
+        android:layout_alignBottom="@+id/forecastNightTempText"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forecastNightTempText"
+        android:text="@string/night"
+        android:textStyle="normal"
+        android:textColor="#B6B6B6"
+        android:layout_below="@+id/forecastDayTemp"
+        android:layout_toStartOf="@+id/forecastNightTemp" />
+
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/forecastImage"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/forecastTemp"
-        android:text="25dsf"
-        android:textSize="25sp"
-        android:layout_marginStart="60dp"
-        android:layout_alignBottom="@+id/forecastImage"
-        android:layout_toEndOf="@+id/forecastImage"/>
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/forecastDay"
-        android:text="Thu"
+        android:text="@string/instance"
         android:textSize="15sp"
-        android:layout_marginEnd="75dp"
-        android:layout_alignBaseline="@+id/forecastTemp"
-        android:layout_alignBottom="@+id/forecastTemp"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp" />
 </RelativeLayout>

@@ -1,30 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="match_parent"
     android:id="@+id/weatherFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/weatherCity"
+        android:text="@string/instance"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_toStartOf="@+id/weatherCountry"
+        android:layout_alignBaseline="@+id/weatherCountry"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherCountry"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/instance"/>
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/weatherTemp"
-        android:textSize="25sp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:text="@string/instance"
+        android:layout_alignBaseline="@+id/weatherTempText"
+        android:layout_alignBottom="@+id/weatherTempText"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherTempText"
+        android:text="@string/temperature"
+        android:layout_marginTop="29dp"
+        android:layout_alignTop="@+id/weatherImage"
+        android:layout_toStartOf="@+id/weatherTemp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherWind"
+        android:text="@string/instance"
+        android:layout_below="@+id/weatherTemp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@+id/weatherWindText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherWindText"
+        android:text="@string/wind"
+        android:layout_below="@+id/weatherTempText"
+        android:layout_toStartOf="@+id/weatherWind" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherPressure"
+        android:text="@string/instance"
+        android:layout_below="@+id/weatherWind"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherPressureText"
+        android:text="@string/pressure"
+        android:layout_alignBaseline="@+id/weatherPressure"
+        android:layout_alignBottom="@+id/weatherPressure"
+        android:layout_toStartOf="@+id/weatherPressure" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherHumidity"
+        android:text="@string/instance"
+        android:layout_below="@+id/weatherPressure"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherHumidityText"
+        android:text="@string/humidity"
+        android:layout_alignBaseline="@+id/weatherHumidity"
+        android:layout_alignBottom="@+id/weatherHumidity"
+        android:layout_toStartOf="@+id/weatherHumidity" />
 
     <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/weatherImage"
-        android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/weatherTemp"
-        android:layout_marginEnd="28dp" />
+        android:src="@drawable/default_picture"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/weatherCity"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherDate"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
 
 </RelativeLayout>
