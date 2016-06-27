@@ -43,13 +43,13 @@ public class HourlyForecastFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        getHourlyValues();
         return inflater.inflate(R.layout.hourly_forecast_fragment, container, false);
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        getHourlyValues();
     }
 
     private void getHourlyValues() {
