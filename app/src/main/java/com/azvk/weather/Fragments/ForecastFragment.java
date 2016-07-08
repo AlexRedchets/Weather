@@ -1,4 +1,4 @@
-package com.azvk.weather;
+package com.azvk.weather.Fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -9,7 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.azvk.weather.model_hourly.Model;
+import com.azvk.weather.Adapters.ForecastAdapter;
+import com.azvk.weather.R;
+import com.azvk.weather.ServiceGenerator;
+import com.azvk.weather.WeatherClient;
 
 import retrofit2.Call;
 import retrofit2.Callback;

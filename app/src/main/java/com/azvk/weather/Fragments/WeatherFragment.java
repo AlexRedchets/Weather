@@ -1,4 +1,4 @@
-package com.azvk.weather;
+package com.azvk.weather.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,16 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
+import com.azvk.weather.ChangeIcon;
+import com.azvk.weather.R;
+import com.azvk.weather.ServiceGenerator;
+import com.azvk.weather.WeatherClient;
 import com.azvk.weather.model_current.Model;
-import com.google.android.gms.vision.text.Text;
 import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,7 +26,7 @@ import retrofit2.Response;
 
 import static android.content.ContentValues.TAG;
 
-class WeatherFragment extends Fragment {
+public class WeatherFragment extends Fragment {
 
     private String temp;
     private String city;
@@ -123,7 +124,7 @@ class WeatherFragment extends Fragment {
 
         String timeToShow = model.getDt().toString();
         Date d = new Date(Long.parseLong(timeToShow) * 1000);
-        SimpleDateFormat sdf = new SimpleDateFormat("MMM, d \nh:m a");
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM, d \nh:mm a");
 
 
 

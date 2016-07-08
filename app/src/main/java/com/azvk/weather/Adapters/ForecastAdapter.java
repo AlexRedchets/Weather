@@ -1,4 +1,4 @@
-package com.azvk.weather;
+package com.azvk.weather.Adapters;
 
 import android.content.Context;
 import android.util.Log;
@@ -9,25 +9,26 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.azvk.weather.model_hourly.List;
+import com.azvk.weather.ChangeIcon;
+import com.azvk.weather.R;
 import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-class ForecastAdapter extends BaseAdapter {
+public class ForecastAdapter extends BaseAdapter {
 
     private java.util.List<com.azvk.weather.model_forecast.List> list;
     private Context context;
     private LayoutInflater inflater;
     private String TAG = ForecastAdapter.class.getSimpleName();
 
-    ForecastAdapter(Context context) {
+    public ForecastAdapter(Context context) {
         this.context = context;
         inflater = LayoutInflater.from(this.context);
     }
 
-    void updateAdapter(java.util.List<com.azvk.weather.model_forecast.List> list){
+    public void updateAdapter(java.util.List<com.azvk.weather.model_forecast.List> list){
         this.list = list;
         notifyDataSetChanged();
         Log.i(TAG, "Adapter is updated");

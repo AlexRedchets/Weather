@@ -1,4 +1,4 @@
-package com.azvk.weather;
+package com.azvk.weather.Fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -10,16 +10,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import com.azvk.weather.Adapters.HourlyForecastAdapter;
+import com.azvk.weather.R;
+import com.azvk.weather.ServiceGenerator;
+import com.azvk.weather.WeatherClient;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
-import java.util.TimeZone;
 
 import retrofit2.Call;
 import retrofit2.Callback;
